@@ -26,7 +26,7 @@ describe("Calculating the fuel", () => {
   });
 
   it("should calculate the right amount of fuel coming from input", () => {
-    const arrayOfInputs: number[] = readFileSync("input.txt")
+    const arrayOfInputs: number[] = readFileSync("./test/day1.txt")
       .toString()
       .split("\n")
       .map(Number);
