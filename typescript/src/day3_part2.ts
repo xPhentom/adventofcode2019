@@ -7,8 +7,7 @@ export const calculateManhattenDistance = (
   wire1Input.forEach(move => applyNextStep(wire1, move));
   wire2Input.forEach(move => applyNextStep(wire2, move));
   let clashes = calculateClashes(wire1, wire2);
-  clashes.shift();
-  return Math.min(...clashes);
+  return clashes;
 };
 
 const applyNextStep = (wire: number[][], input: string) => {
@@ -39,14 +38,17 @@ const applyNextStep = (wire: number[][], input: string) => {
   }
 };
 
-const calculateClashes = (wire1: number[][], wire2: number[][]): number[] => {
-  let clashes: number[] = [];
+const calculateClashes = (wire1: number[][], wire2: number[][]): number => {
   for (let x = 0; x < wire1.length; x++) {
     for (let y = 0; y < wire2.length; y++) {
-      if (wire1[x][0] === wire2[y][0] && wire1[x][1] === wire2[y][1]) {
-        clashes.push(Math.abs(wire1[x][0]) + Math.abs(wire1[x][1]));
+      if (
+        wire1[x][0] === wire2[y][0] &&
+        wire1[x][1] === wire2[y][1] &&
+        x + y != 0
+      ) {
+        return x + y;
       }
     }
   }
-  return clashes;
+  return 0;
 };
