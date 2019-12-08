@@ -1,24 +1,20 @@
 import {
   calculateRequiredFuel,
   calculateFuelFromArray
-} from "../src/day1_part1";
+} from "../../src/day1/day1_part2";
 import { readFileSync } from "fs";
 
-describe("Calculating the fuel", () => {
-  it("should return 2 fuel when the mass is 12", () => {
-    expect(calculateRequiredFuel(12)).toBe(2);
-  });
-
+describe("Calculating the fuel (recursive)", () => {
   it("should return 2 fuel when the mass is 14", () => {
     expect(calculateRequiredFuel(14)).toBe(2);
   });
 
-  it("should return 654 fuel when the mass is 1969", () => {
-    expect(calculateRequiredFuel(1969)).toBe(654);
+  it("should return 966 fuel when the mass is 1969", () => {
+    expect(calculateRequiredFuel(1969)).toBe(966);
   });
 
-  it("should return 33583 fuel when the mass is 100756", () => {
-    expect(calculateRequiredFuel(100756)).toBe(33583);
+  it("should return 50346 fuel when the mass is 100756", () => {
+    expect(calculateRequiredFuel(100756)).toBe(50346);
   });
 
   it("should return 4 fuel when the masses are 14 and 14", () => {

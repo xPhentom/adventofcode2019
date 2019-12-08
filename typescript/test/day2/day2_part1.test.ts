@@ -1,4 +1,4 @@
-import { intcodeInterpreter } from "../src/day2_part1";
+import { intcodeInterpreter } from "../../src/day2/day2_part1";
 import { readFileSync } from "fs";
 
 describe("Intcode interpreter", () => {

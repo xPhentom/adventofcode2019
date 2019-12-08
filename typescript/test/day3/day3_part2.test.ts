@@ -1,4 +1,4 @@
-import { calculateManhattenDistance } from "../src/day3_part2";
+import { calculateManhattenDistance } from "../../src/day3/day3_part2";
 import { readFileSync } from "fs";
 
 describe("Calculate stuff", () => {

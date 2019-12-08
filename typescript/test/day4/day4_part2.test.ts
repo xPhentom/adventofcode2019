@@ -1,4 +1,7 @@
-import { calculatePossiblePassword, matchesCriteria } from "../src/day4_part2";
+import {
+  calculatePossiblePassword,
+  matchesCriteria
+} from "../../src/day4/day4_part2";
 
 fdescribe("Find possible passwords", () => {
   it("should accept the value 112233", () => {
