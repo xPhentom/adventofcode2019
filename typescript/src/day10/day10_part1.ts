@@ -10,20 +10,11 @@ export const calculateAmountOfVisibleAsteroids = (input: string): number => {
 }
 export const checkHowManyAsteroidsICanSee = (index: number, map: boolean[]): number => {
     let countAsteroids = 0
-    let distance: number = 1
-    // map[index - 1] && countAsteroids++
-    while (map[index + distance] === false) {
-        distance++
-    }
-    if (map[index + distance]) {
+
+    if (map.slice(0, index).filter(x => x).length > 1) {
         countAsteroids++
     }
-
-    distance = 1
-    while (map[index - distance] === false) {
-        distance++
-    }
-    if (map[index - distance]) {
+    if (map.slice(index, map.length).filter(x => x).length > 1) {
         countAsteroids++
     }
     return countAsteroids
