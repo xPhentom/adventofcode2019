@@ -3,7 +3,7 @@ import {
   matchesCriteria
 } from "../../src/day4/day4_part2";
 
-fdescribe("Find possible passwords", () => {
+describe("Find possible passwords", () => {
   it("should accept the value 112233", () => {
     expect(matchesCriteria(112233)).toBe(true);
   });
